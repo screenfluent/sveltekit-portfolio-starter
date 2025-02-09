@@ -21,11 +21,10 @@ const config = {
 		// adapter-auto only supports certain environments. See https://svelte.dev/docs/kit/adapter-auto for details.
 		adapter: adapter(),
 
-		// Enable Vite's inspector
-		vitePlugin: {
-			inspector: {
-				enabled: true
-			}
+		// Configure path aliases
+		alias: {
+			$content: './src/content',
+			'@': './src'
 		}
 	}
 };

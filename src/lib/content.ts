@@ -1,5 +1,5 @@
 import type { SvelteComponent } from 'svelte';
-import type { BlogPost, BlogPostMetadata } from '$lib/types';
+import type { BlogPost, BlogPostMetadata } from './types';
 
 /**
  * Get a single blog post by slug
