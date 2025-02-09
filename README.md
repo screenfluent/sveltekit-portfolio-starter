@@ -1,4 +1,4 @@
-# Portfolio Blog Starter
+# SvelteKit Portfolio Blog Starter
 
 This is a portfolio site template complete with a blog. Built with:
 
