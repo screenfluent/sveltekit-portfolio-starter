@@ -1,34 +1,25 @@
 {
-  "name": "examples",
-  "license": "MIT",
   "private": true,
-  "engines": {
-    "pnpm": "9.13.0"
-  },
   "scripts": {
-    "lint-staged": "lint-staged",
-    "new-example": "plop example",
-    "prepare": "husky install",
-    "prettier": "prettier --write ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "pre-commit": "lint-staged",
-  "lint-staged": {
-    "!(**/.vercel/**/*)**/*.{ts,tsx}": [
-      "prettier --write",
-      "eslint -c .eslintrc.json --no-eslintrc --no-ignore --max-warnings=0 --fix"
-    ],
-    "**/*.{json,md,mdx,css,html,yml,yaml,scss}": [
-      "prettier --write"
-    ]
-  },
-  "devDependencies": {
-    "eslint": "latest",
-    "eslint-config-next": "canary",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "plop": "^3.1.1",
-    "prettier": "^2.7.1",
-    "typescript": "^4.9.5"
-  },
-  "packageManager": "pnpm@9.13.0"
+  "dependencies": {
+    "@tailwindcss/postcss": "4.0.0-alpha.13",
+    "@types/node": "20.11.17",
+    "@types/react": "18.2.55",
+    "@types/react-dom": "18.2.19",
+    "@vercel/analytics": "^1.1.3",
+    "@vercel/speed-insights": "^1.0.9",
+    "geist": "1.2.2",
+    "next": "canary",
+    "next-mdx-remote": "^4.4.1",
+    "postcss": "^8.4.35",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sugar-high": "^0.6.0",
+    "tailwindcss": "4.0.0-alpha.13",
+    "typescript": "5.3.3"
+  }
 }
