@@ -18,12 +18,14 @@ const config = {
 	],
 
 	kit: {
-		// adapter-auto only supports certain environments.adapter-auto only supports certain environments. See https://kit.svelte.dev/docs/adapter-auto for details.
-		adapter: adapter()
-	},
-	vitePlugin: {
-		inspector: {
-			enabled: true
+		// adapter-auto only supports certain environments. See https://svelte.dev/docs/kit/adapter-auto for details.
+		adapter: adapter(),
+
+		// Enable Vite's inspector
+		vitePlugin: {
+			inspector: {
+				enabled: true
+			}
 		}
 	}
 };
