@@ -1,38 +1,46 @@
-# sv
+# Portfolio Blog Starter
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This is a portfolio site template complete with a blog. Built with:
 
-## Creating a project
+- Svelte 5 / SvelteKit 2
+- Bun 1.2
+- MDsveX for Markdown/MDX support
+- Tailwind CSS 4
+- Optimized for SEO (sitemap, robots)
+- RSS Feed
+- Dynamic OG images
+- Syntax highlighting
+- Vercel Speed Insights / Web Analytics
+- Geist font
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Demo
+
+https://portfolio-blog-starter.vercel.app
+
+## How to Use
+
+You can choose from one of the following two methods to use this repository:
+
+### One-Click Deploy
+
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
+
+### Clone and Deploy
+
+Clone and install dependencies:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+git clone [repository-url]
+cd blog
+bun install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Then, run SvelteKit in development mode:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun dev
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Deploy it to the cloud with [Vercel](https://vercel.com/templates).
