@@ -1,10 +1,4 @@
-node_modules
-.next
-.vercel
-public
-dist
-
-# Ignore dependency locks
-pnpm-lock.yaml
+# Package Managers
 package-lock.json
+pnpm-lock.yaml
 yarn.lock
