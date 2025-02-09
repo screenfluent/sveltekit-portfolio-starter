@@ -28,23 +28,7 @@ Note: Blog posts will be stored in src/content/blog/ and loaded via +page.server
 This provides better separation of content and routing logic while maintaining all Next.js functionality.
 ```
 
-## 2. Core Dependencies
-
-```markdown
-- Remove Next.js dependencies:
-
-  - next
-  - react-dom
-  - @types/react
-
-- Add SvelteKit dependencies:
-  - @sveltejs/kit
-  - svelte
-  - @sveltejs/adapter-static
-  - svelte-preprocess
-```
-
-## 3. Routing Migration Strategy
+## 2. Routing Migration Strategy
 
 ### Page Routes
 
@@ -62,7 +46,7 @@ This provides better separation of content and routing logic while maintaining a
 app/blog/[slug]/page.tsx → src/routes/blog/[slug]/+page.svelte
 ```
 
-## 4. Data Fetching Conversion
+## 3. Data Fetching Conversion
 
 | Next.js Pattern    | SvelteKit Equivalent |
 | ------------------ | -------------------- |
@@ -70,14 +54,14 @@ app/blog/[slug]/page.tsx → src/routes/blog/[slug]/+page.svelte
 | getServerSideProps | +page.server.js load |
 | API Routes         | +server.js endpoints |
 
-## 5. Component Migration Checklist
+## 4. Component Migration Checklist
 
 - [ ] Convert React components to Svelte syntax
 - [ ] Replace useState → $state runes
 - [ ] Migrate useEffect → $effect
 - [ ] Convert props handling → $props
 
-## 6. Styling Strategy
+## 5. Styling Strategy
 
 ```javascript
 // svelte.config.js
@@ -88,7 +72,7 @@ export default {
 };
 ```
 
-## 7. API Routes Conversion
+## 6. API Routes Conversion
 
 ```javascript
 // src/routes/api/projects/+server.ts
@@ -97,7 +81,7 @@ export const GET = async () => {
 };
 ```
 
-## 8. Configuration Changes
+## 7. Configuration Changes
 
 | File                 | Changes Needed                |
 | -------------------- | ----------------------------- |
@@ -106,14 +90,14 @@ export const GET = async () => {
 | svelte.config.js     | New adapter setup             |
 | .npmrc → bunfig.toml | Completed in previous step    |
 
-## 9. Testing Strategy
+## 8. Testing Strategy
 
 1. Component-level tests with Vitest
 2. E2E navigation tests via Playwright
 3. Data loading validation
 4. Static generation verification
 
-## 10. Deployment Plan
+## 9. Deployment Plan
 
 ```markdown
 - Use adapter-static for SSG
@@ -125,15 +109,3 @@ export const prerender = true;
 ```
 - Update build script to `vite build`
 ```
-
-## Timeline Estimate
-
-| Phase              | Estimate |
-| ------------------ | -------- |
-| Core Setup         | 2 hours  |
-| Page Migration     | 6 hours  |
-| API Conversion     | 3 hours  |
-| Styling Adjustment | 4 hours  |
-| Testing & Polish   | 5 hours  |
-
-Would you like me to proceed with implementing any specific section first?
